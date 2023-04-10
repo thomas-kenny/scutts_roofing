@@ -1,29 +1,47 @@
-.bg-white.dark:bg-gray-800
-  %nav.2xl:container.2xl:mx-auto.sm:py-6.sm:px-7.py-5.px-4
-    / For large and Medium-sized Screen
-    .flex.justify-between
-      .hidden.sm:flex.flex-row.items-center.space-x-6
-        %img.dark:bg-white.p-1.rounded.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-gray-800.cursor-pointer{:alt => "twitter", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg1.svg"}/
-        %img.dark:bg-white.p-1.rounded.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-gray-800.cursor-pointer{:alt => "facebook", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg2.svg"}/
-        %img.dark:bg-white.p-1.rounded.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-gray-800.cursor-pointer{:alt => "linkdin", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg3.svg"}/
-        %img.dark:bg-white.p-1.rounded.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-gray-800.cursor-pointer{:alt => "instagram", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg4.svg"}/
-      .flex.space-x-3.items-center
-        %img.p-1.dark:bg-white.rounded-full{:alt => "circle", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg5.svg"}/
-        %h1.font-normal.text-2xl.leading-6.text-gray-800.dark:text-white Scutts Roofing Ltd
-      .hidden.sm:flex.flex-row.space-x-4
-        %button.rounded-md.flex.space-x-2.w-24.h-10.font-normal.text-sm.leading-3.text-indigo-700.bg-white.border.border-indigo-700.focus:outline-none.focus:bg-gray-200.hover:bg-gray-200.duration-150.justify-center.items-center Sign Up
-        %button.rounded-md.flex.space-x-2.w-24.h-10.font-normal.text-sm.leading-3.text-white.bg-indigo-700.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-indigo-700.focus:bg-indigo-600.hover:bg-indigo-600.duration-150.justify-center.items-center Sign In
-      / Burger Icon
-      #bgIcon.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-gray-800.flex.justify-center.items-center.sm:hidden.cursor-pointer{:onclick => "toggleMenu()"}
-        %img.dark:bg-white{:alt => "burger", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg6.svg"}/
-        %img.dark:bg-white.hidden{:alt => "cross", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg7.svg"}/
-    / Mobile and small-screen devices (toggle Menu)
-    #MobileNavigation.hidden.sm:hidden.mt-4.mx-auto
-      .flex.flex-row.items-center.justify-center.space-x-6
-        %img{:alt => "twitter", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg1.svg"}/
-        %img{:alt => "facebook", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg2.svg"}/
-        %img{:alt => "linkdin", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg3.svg"}/
-        %img{:alt => "instagram", :src => "https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg4.svg"}/
-      .flex.flex-col.gap-4.mt-4.w-80.mx-auto
-        %button.rounded-md.flex.space-x-2.w-full.h-10.font-normal.text-sm.leading-3.text-indigo-700.bg-indigo-600.bg-opacity-0.hover:opacity-100.duration-100.border.border-indigo-700.focus:outline-none.focus:bg-gray-200.hover:bg-gray-200.duration-150.justify-center.items-center Sign Up
-        %button.rounded-md.flex.space-x-2.w-full.h-10.font-normal.text-sm.leading-3.text-white.bg-indigo-700.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-indigo-700.focus:bg-indigo-600.hover:bg-indigo-600.duration-150.justify-center.items-center Sign In
+%body
+  %header.bg-white
+    %nav.flex.items-center.justify-between.p-6.lg:px-8{"aria-label" => "Global"}
+      .flex.lg:flex-1
+        %a{:class => "-m-1.5 p-1.5", :href => "#"}
+          %span.sr-only Scutts Roofing Ltd
+          = image_tag('navbar_logo')
+      .flex.lg:hidden
+        %button.inline-flex.items-center.justify-center.rounded-md.text-gray-700{:class => "-m-2.5 p-2.5", :type => "button"}
+          %span.sr-only Open main menu
+          %svg.h-6.w-6{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
+            %path{:d => "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
+      .hidden.lg:flex.lg:gap-x-12
+        %a.text-sm.font-semibold.leading-6.text-gray-900{:href => "#"} Services
+        %a.text-sm.font-semibold.leading-6.text-gray-900{:href => "#"} About us
+        %a.text-sm.font-semibold.leading-6.text-gray-900{:href => "#"} Our projects
+        %a.text-sm.font-semibold.leading-6.text-gray-900{:href => "#"} Contact us
+
+    / Mobile menu, show/hide based on menu open state.
+    #mobile-nav.lg:hidden{"aria-modal" => "true", :role => "dialog"}
+      / Background backdrop, show/hide based on slide-over state.
+      .fixed.inset-0.z-10
+      .fixed.inset-y-0.right-0.z-10.w-full.overflow-y-auto.bg-white.px-6.py-6.sm:max-w-sm.sm:ring-1{:class => "sm:ring-gray-900/10"}
+        .flex.items-center.justify-between
+          %a{:class => "-m-1.5 p-1.5", :href => "#"}
+            %span.sr-only Your Company
+            = image_tag('navbar_logo')
+          %button.rounded-md.text-gray-700{:class => "-m-2.5 p-2.5", :type => "button"}
+            %span.sr-only Close menu
+            %svg.h-6.w-6{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
+              %path{:d => "M6 18L18 6M6 6l12 12", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
+        .mt-6.flow-root
+          .-my-6.divide-y{:class => "divide-gray-500/10"}
+            .space-y-2.py-6
+              %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Services
+              %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} About us
+              %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Our projects
+              %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Contact us
+
+:javascript
+  
+
+  function toggleMenu() {
+    var mobileNav = document.querySelector('#mobile-nav')
+    console.log(mobileNav)
+    mobileNav.classList.remove('hidden')
+  }
