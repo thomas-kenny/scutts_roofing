@@ -1,31 +1,31 @@
 %body
   %header.bg-white
-    %nav.flex.items-center.justify-between.p-6.lg:px-8{"aria-label" => "Global"}
+    %nav.flex.items-center.justify-between.p-6.lg:px-8.desktop-navbar{"aria-label" => "Global"}
       .flex.lg:flex-1
         %a{:class => "-m-1.5 p-1.5", :href => "#"}
           %span.sr-only Scutts Roofing Ltd
           = image_tag('navbar_logo')
       .flex.lg:hidden
-        %button.inline-flex.items-center.justify-center.rounded-md.text-gray-700{:class => "-m-2.5 p-2.5", :type => "button"}
+        %button.inline-flex.items-center.justify-center.rounded-md.text-gray-700.open-mobile-menu{:class => "-m-2.5 p-2.5", :type => "button"}
           %span.sr-only Open main menu
           %svg.h-6.w-6{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
             %path{:d => "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
       .hidden.lg:flex.lg:gap-x-12
-        %a.text-sm.font-semibold.leading-6.text-gray-900{:href => "#"} Services
-        %a.text-sm.font-semibold.leading-6.text-gray-900{:href => "#"} About us
-        %a.text-sm.font-semibold.leading-6.text-gray-900{:href => "#"} Our projects
-        %a.text-sm.font-semibold.leading-6.text-gray-900{:href => "#"} Contact us
+        %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} Services
+        %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} About us
+        %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} Our projects
+        %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} Contact us
 
     / Mobile menu, show/hide based on menu open state.
-    #mobile-nav.lg:hidden{"aria-modal" => "true", :role => "dialog"}
+    .lg:hidden{"aria-modal" => "true", :role => "dialog"}
       / Background backdrop, show/hide based on slide-over state.
-      .fixed.inset-0.z-10
-      .fixed.inset-y-0.right-0.z-10.w-full.overflow-y-auto.bg-white.px-6.py-6.sm:max-w-sm.sm:ring-1{:class => "sm:ring-gray-900/10"}
+      #mobile-nav.hidden.z-10.w-full.overflow-y-auto.bg-white.px-6.sm:max-w-sm.sm:ring-1{:class => "sm:ring-gray-900/10"}
         .flex.items-center.justify-between
-          %a{:class => "-m-1.5 p-1.5", :href => "#"}
-            %span.sr-only Your Company
-            = image_tag('navbar_logo')
-          %button.rounded-md.text-gray-700{:class => "-m-2.5 p-2.5", :type => "button"}
+          .mobile-logo
+            %a{:class => "-m-1.5 p-1.5", :href => "#"}
+              %span.sr-only Your Company
+              = image_tag('navbar_logo')
+          %button.rounded-md.text-gray-700.close-mobile-menu{:class => "-m-2.5 p-2.5", :type => "button"}
             %span.sr-only Close menu
             %svg.h-6.w-6{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
               %path{:d => "M6 18L18 6M6 6l12 12", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
@@ -35,13 +35,52 @@
               %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Services
               %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} About us
               %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Our projects
-              %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Contact us
+              %a.-mx-3.block.rounded-lg.px-3.py-2.te
+
+
+  .relative.isolate.overflow-hidden.bg-gray-900
+    %img.absolute.-z-10.h-full.w-full.object-cover.opacity-40{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1682154263/Scutts%20Roofing/instagram_roof_yxj3ow.jpg"}/
+    %section
+      .mx-auto.max-w-2xl.py-32.sm:py-48.lg:py-56
+        %h1.text-4xl.font-bold.tracking-tight.text-white.sm:text-6xl Roofers you can rely on
+        %p.mt-6.text-xl.leading-8.text-gray-300 With extensive experience in the trade, Scutts Roofing sepcialises in roof renewals and repairs.
+        .mt-10.flex.items-center.justify-center.gap-x-6
+          %a.rounded-md.bg-indigo-500.text-sm.font-semibold.text-white.shadow-sm.hover:bg-indigo-400.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.focus-visible:outline-indigo-400{:class => "px-3.5 py-2.5", :href => "#"} Get started
+          %a.text-sm.font-semibold.leading-6.text-white{:href => "#"}
+            Learn more
+            %span{"aria-hidden" => "true"} →
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 :javascript
   
+  var openMobileButton = document.querySelector('.open-mobile-menu')
+  var closeMobileButton = document.querySelector('.close-mobile-menu')
+  
+  openMobileButton.addEventListener('click', showMobileMenu)
+  closeMobileButton.addEventListener('click', closeMobileMenu)
 
-  function toggleMenu() {
+  function showMobileMenu() {
     var mobileNav = document.querySelector('#mobile-nav')
-    console.log(mobileNav)
     mobileNav.classList.remove('hidden')
+    openMobileButton.classList.add('hidden')
+    document.querySelector('.desktop-navbar').classList.add('hidden')
+  }
+
+  function closeMobileMenu() {
+    var mobileNav = document.querySelector('#mobile-nav')
+    mobileNav.classList.add('hidden')
+    openMobileButton.classList.remove('hidden')
+    document.querySelector('.desktop-navbar').classList.remove('hidden')
   }
