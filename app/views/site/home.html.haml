@@ -11,8 +11,8 @@
           %svg.h-6.w-6{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
             %path{:d => "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
       .hidden.lg:flex.lg:gap-x-12
-        %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} Services
         %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} About us
+        %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} Services
         %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} Our projects
         %a.text-base.font-semibold.leading-6.text-gray-900{:href => "#"} Contact us
 
@@ -32,8 +32,8 @@
         .mt-6.flow-root
           .-my-6.divide-y{:class => "divide-gray-500/10"}
             .space-y-2.py-6
-              %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Services
               %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} About us
+              %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Services
               %a.-mx-3.block.rounded-lg.px-3.py-2.text-base.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#"} Our projects
               %a.-mx-3.block.rounded-lg.px-3.py-2.te
 
@@ -41,14 +41,14 @@
   .relative.isolate.overflow-hidden.bg-gray-900
     %img.absolute.-z-10.h-full.w-full.object-cover.opacity-40{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1682154263/Scutts%20Roofing/instagram_roof_yxj3ow.jpg"}/
     %section
-      .mx-auto.max-w-2xl.py-32.sm:py-48.lg:py-56
-        %h1.text-4xl.font-bold.tracking-tight.text-white.sm:text-6xl Roofers you can rely on
-        %p.mt-6.text-xl.leading-8.text-gray-300 With extensive experience in the trade, Scutts Roofing provide a proffessional service sepcialising in roof renewals and repairs.
+      .mx-auto.max-w-2xl.py-32.sm:py-48.lg:py-56.px-4.md:px-0
+        %h1.text-4xl.font-bold.tracking-tight.text-white.sm:text-6xl Roofers you can rely on.
+        %p.mt-6.text-lg.md:text-xl.leading-8.text-gray-300 With extensive experience in the trade, Scutts Roofing provide a professional service specialising in roof renewals and repairs.
         .mt-10.flex.items-center.justify-center.gap-x-6
           %a.rounded-md.bg-white.text-lg.font-semibold.text-black.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.focus-visible:outline-indigo-400{:class => "px-3.5 py-2.5", :href => "#"} Get a quote today
           %a.rounded-md.bg-indigo-500.text-lg.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.focus-visible:outline-indigo-400{:class => "px-3.5 py-2.5", :href => "tel:07488825167"} 07488 825167
 
-
+= render 'about_us'
 
 
 
