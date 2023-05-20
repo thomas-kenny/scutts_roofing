@@ -2,13 +2,53 @@
   .mx-auto.max-w-7xl.px-6.lg:px-8
     .mx-auto.max-w-xl.text-center
       %p.mt-2.text-3xl.font-bold.tracking-tight.text-gray-900.sm:text-4xl What our customers have to say
-    %section.relative.isolate.overflow-hidden.bg-white.px-6.py-8.sm:py-12.lg:px-8
-      .absolute.inset-0.-z-10.opacity-20{:class => "bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)]"}
-      .absolute.inset-y-0.-z-10.mr-16.origin-bottom-left.bg-white.shadow-xl.ring-1.ring-indigo-50.sm:mr-28.lg:mr-0.xl:mr-16.xl:origin-center{:class => "right-1/2 w-[200%] skew-x-[-30deg] shadow-indigo-600/10"}
-      .mx-auto.max-w-2xl.lg:max-w-4xl
-        %figure.mt-10
-          %blockquote.text-center.lg:text-lg.font-semibold.leading-8.text-gray-900.sm:text-2xl.sm:leading-9
-            %p “I live overseas and needed urgent repairs to a storm damaged flat roof. I found Stuart through a Facebook referral and cannot be more effusive in my recommendation of him. He was thorough, clear and a great communicator of timelines and requirements for the job. During the assessment, he was honest about which repairs were essential and which jobs were nice to have and took the time to explain. He went the extra yard to send through photos and videos explaining the state of the roof, which was incredibly helpful as I couldn't be on site. He also did the job within timeframe and budget.”
-          %figcaption.mt-10
+    .flex.justify-between
+      .w-6.chevron-left.cursor-pointer{style: 'align-self: center'}
+        = image_tag('back')
+      %section.relative.isolate.overflow-hidden.bg-white.px-6.py-8.sm:py-12.lg:px-8.flex
+        .mx-auto.max-w-2xl.lg:max-w-4xl.flex
+          %figure.mt-10.flex
+            %blockquote.text-center.lg:text-lg.font-medium.leading-8.text-gray-900.sm:text-sm.sm:leading-9.lg:h-36.flex
+              .testimonials.flex{style: 'align-self: center'}
+                %p#testimonial-1.testimonial.active “I live overseas and needed urgent repairs to a storm damaged flat roof. I found Stuart through a Facebook referral and cannot be more effusive in my recommendation of him. He was thorough, clear and a great communicator of timelines and requirements for the job. During the assessment, he was honest about which repairs were essential and which jobs were nice to have and took the time to explain. He went the extra yard to send through photos and videos explaining the state of the roof, which was incredibly helpful as I couldn't be on site. He also did the job within timeframe and budget.”
+                %p#testimonial-2.testimonial.hidden “Great guys great job very efficient. Stuart, Jack and Leo pulled out all the stops. I’m really appreciated their dedication to the job. They explained everything and answered all my concerns. Good job no hesitation in giving these guys 5 stars. Keep up the good work."
+                %p#testimonial-3.testimonial.hidden "Stuart provided a timely and informative roof report prior to our purchase of our home, which aided us in negotiating a price reduction. He and his team were then able to complete the work to a high standard and were efficient in doing so. Stuart communicated throughout and also was available to discuss details of his initial report when the vendor had queries. Definitely recommend."
+                %p#testimonial-4.testimonial.hidden "Highly recommened! Stuart was highly communicative about the work all the way through, and when weather got in the way at one point he always kept us updated. The work itself we're really pleased with! Would highly recommened Stuart and his team."
+                %p#testimonial-5.testimonial.hidden "Stuart and his team were brilliant. Extremely thorough, the quality of the work was brilliant and Stuart always explained every step clearly. He also gave excellent advice about which roof made sense based on our specific situation rather than just pushing the most expensive option which is really appreciated. Very high quality finish on the roof, tidy and respectful of our flat and finished ahead of schedule. I would recommend Stuart and Scutts Roofing to anyone!"
+                %p#testimonial-6.testimonial.hidden "Very professional level of work. Very happy with the standard of the work. Resolved the issue with a very high standard of work."
+                %p#testimonial-7.testimonial.hidden "I have used Scutt's Roofing on a couple occasions now and the service is always excellent. This time was no exception. Really clear communication before and after the work was carried out. Good quality work that resolved the issues we had. No complaints at all."
+                %p#testimonial-8.testimonial.hidden "Stuart was very quick to diagnose the problem and quote for the work. He carried out some small repairs and did a complete renewal of our loft flat roof. The work was carried out to a high standard and for a fair price. I highly recommend"
+                %p#testimonial-9.testimonial.hidden "Stuart and Leo recently repaired the roof on our Victorian terraced house, replaced the external guttering and fascia boards and repointed external walls. We are really pleased with the work and would definitely use them again. They were friendly and great at communicating about all aspects of the work."
+                %p#testimonial-10.testimonial.hidden "Stuart and his team have now done 2 large jobs for me, replacing a garage roof and more recently doing major repairs to the roof of our 1913 property. I am extremely pleased with the whole process, from the initial detailed estimate of costs, the great communication throughout the process to the professionalism and quality of the finished job. All of the team were friendly and helpful. I would highly recommend Scutts Roofing Ltd."
+            %figcaption.mt-10
+      .w-6.chevron-right.cursor-pointer{style: 'align-self: center'}
+        = image_tag('next')
+    %a.flex.justify-center.py-4{href: "https://www.checkatrade.com/trades/scuttsroofingltd", target: "_blank"}
+      .flex.border-b-2.w-fit.border-teal-500
+        .text-sm
+          See more reviews at
+        .w-36.ml-2
+          = image_tag('checkatradelogo')
+
+
+:javascript
+
+  $('.chevron-right').click(function() {
+    var activeId = parseInt($('.testimonials').find('.active').attr('id').split("-")[1])
+    if (activeId === 10) return
+    $('.testimonials').find('.active').fadeOut('fast', function() {
+      $(this).removeClass('active').addClass('hidden');
+      $(`#testimonial-${activeId + 1}`).fadeIn('fast').removeClass('hidden').addClass('active');
+    });
+  })
+
+  $('.chevron-left').click(function() {
+    var activeId = parseInt($('.testimonials').find('.active').attr('id').split("-")[1])
+    if (activeId === 1) return
+    $('.testimonials').find('.active').fadeOut('fast', function() {
+      $(this).removeClass('active').addClass('hidden');
+      $(`#testimonial-${activeId - 1}`).fadeIn('fast').removeClass('hidden').addClass('active');
+    });
+  })
 
 
