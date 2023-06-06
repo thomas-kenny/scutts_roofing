@@ -122,6 +122,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.14.2-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.14.2-x86_64-linux)
+      racc (~> 1.4)
     public_suffix (5.0.1)
     puma (4.3.12)
       nio4r (~> 2.0)
@@ -190,7 +192,10 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.2-x86_64-darwin)
+    sqlite3 (1.6.2-x86_64-linux)
     tailwindcss-rails (2.0.27-x86_64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.27-x86_64-linux)
       railties (>= 6.0.0)
     temple (0.10.0)
     thor (1.2.1)
@@ -225,6 +230,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
