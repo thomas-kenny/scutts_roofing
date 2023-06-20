@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      spacing: {
+        '130': '30rem',
+        '150': '50rem',
+      }
     },
   },
   plugins: [
