@@ -20,6 +20,9 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# Heroku dynos use an ephemeral filesystem: this SQLite file is recreated on deploy
+# and not shared across dynos. Fine for a static site with no persisted data; use
+# Heroku Postgres (DATABASE_URL + pg gem) if you need a real production database.
 production:
   <<: *default
   database: db/production.sqlite3
