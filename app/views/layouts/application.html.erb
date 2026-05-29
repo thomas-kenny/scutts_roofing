@@ -2,6 +2,9 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : 'ScuttsRoofing' %></title>
+    <% if content_for?(:description) %>
+      <meta name="description" content="<%= yield(:description) %>">
+    <% end %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
