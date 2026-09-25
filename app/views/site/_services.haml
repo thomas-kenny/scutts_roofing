@@ -1,45 +1,46 @@
 .bg-white.py-16.lg:py-0#services
   .mx-auto.lg:max-w-7xl.px-6.lg:px-8.max-w-4xl
     .mx-auto.max-w-xl.text-center
-      %h2.mt-2.lg:text-3xl.font-bold.tracking-tight.text-orange-600.text-5xl Our services
-    %ul.pt-16.grid.grid-cols-2.gap-x-4.gap-y-8.lg:gap-x-8.lg:gap-y-16.sm:grid-cols-1.sm:gap-x-6.lg:grid-cols-4.xl:gap-x-8{:role => "list"}
+      %h2.mt-2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-3xl Our services
+    %ul.pt-12.grid.grid-cols-2.gap-x-4.gap-y-8.sm:gap-x-6.lg:grid-cols-4.lg:gap-x-8.lg:gap-y-16.xl:gap-x-8{:role => "list"}
       %li.relative.text-center.text-gray-700
         .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
           %img.pointer-events-none.object-cover{:alt => "Roof inspections", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1682151644/Scutts%20Roofing/Masonry%20Render%20Chimney/masonry_render_chimney_7_b8saoq.jpg"}/
-        %h3.text-lg.lg:text-xl.font-bold.text-center.py-4.lg:py-3
+        %h3.text-base.sm:text-lg.font-bold.text-center.py-3
           Roof Inspections
       %li.relative.text-center.text-gray-700
         .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
           %img.pointer-events-none.object-cover{:alt => "Roof installations", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1683976320/Scutts%20Roofing/Masonry%20Render%20Chimney/flat_roofing_1_hmhfqu.jpg"}/
-        %h3.text-lg.lg:text-xl.font-bold.text-center.py-4.lg:py-3
+        %h3.text-base.sm:text-lg.font-bold.text-center.py-3
           Roof Installations
       %li.relative.text-center.text-gray-700
         .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
           %img.pointer-events-none.object-cover{:alt => "Roof repairs", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1683976404/Scutts%20Roofing/Masonry%20Render%20Chimney/repairs_1_ksjtpv.jpg"}/
-        %h3.text-lg.lg:text-xl.font-bold.text-center.py-4.lg:py-3
+        %h3.text-base.sm:text-lg.font-bold.text-center.py-3
           Roof Repairs
       %li.relative.text-center.text-gray-700
         .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
           %img.pointer-events-none.object-cover{:alt => "Weather damage solutions", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1683976578/Scutts%20Roofing/Masonry%20Render%20Chimney/renewals_restorations_2_cfqzez.jpg"}/
-        %h3.text-lg.lg:text-xl.font-bold.text-center.py-4.lg:py-3
+        %h3.text-base.sm:text-lg.font-bold.text-center.py-3
           Weather Damage Solutions
       %li.relative.text-center.text-gray-700
         .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
           %img.pointer-events-none.object-cover{:alt => "Chimney repairs", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1682151646/Scutts%20Roofing/Masonry%20Render%20Chimney/masonry_render_chimney_1_n5smy4.jpg"}/
-        %h3.text-lg.lg:text-xl.font-bold.text-center.py-4.lg:py-3
+        %h3.text-base.sm:text-lg.font-bold.text-center.py-3
           Chimney Repairs
       %li.relative.text-center.text-gray-700
         .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
           %img.pointer-events-none.object-cover{:alt => "Brickwork, slate and tiles", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1687536560/Scutts%20Roofing/Misc/blue_tile_roof_ibvvwl.png"}/
-        %h3.text-lg.lg:text-xl.font-bold.text-center.py-4.lg:py-3
+        %h3.text-base.sm:text-lg.font-bold.text-center.py-3
           Brickwork, Slate & Tiles
       %li.relative.text-center.text-gray-700
         .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
           %img.pointer-events-none.object-cover{:alt => "Flat roofing", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1683976772/Scutts%20Roofing/Masonry%20Render%20Chimney/flat_roofing_6_qgaeak.jpg"}/
-        %h3.text-lg.lg:text-xl.font-bold.text-center.py-4.lg:py-3
+        %h3.text-base.sm:text-lg.font-bold.text-center.py-3
           Flat Roofing
       %li.relative.text-center.text-gray-700
-        .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
-          %img.pointer-events-none.object-cover{:alt => "Eco and green roofs", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1687536118/Scutts%20Roofing/Misc/324904784_134916666103543_6309358684294191937_n_qrfwdp.jpg"}/
-        %h3.text-lg.lg:text-xl.font-bold.text-center.py-4.lg:py-3
-          Eco & Green Roofs
+        %a.block.group{:href => eco_solar_roofs_path}
+          .aspect-h-10.aspect-w-11.block.w-full.overflow-hidden.rounded-lg.bg-gray-100
+            %img.pointer-events-none.object-cover.transition.group-hover:opacity-90{:alt => "Eco and green roofs", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1687536118/Scutts%20Roofing/Misc/324904784_134916666103543_6309358684294191937_n_qrfwdp.jpg"}/
+          %h3.text-base.sm:text-lg.font-bold.text-center.py-3.group-hover:text-orange-600.transition
+            Eco & Green Roofs

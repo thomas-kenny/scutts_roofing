@@ -6,7 +6,7 @@
       .flex.lg:flex-1
         %a{:class => "-m-1.5 p-1.5", :href => root_path}
           %span.sr-only Scutts Roofing Ltd
-          = image_tag('navbar_logo.jpg')
+          = image_tag('navbar_logo.jpg', class: 'h-12 w-auto')
       .flex.lg:hidden
         %button.inline-flex.items-center.justify-center.rounded-md.text-gray-700.open-mobile-menu{:class => "-m-2.5 p-2.5", :type => "button"}
           %span.sr-only Open main menu
@@ -14,6 +14,7 @@
             %path{:d => "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
       .hidden.lg:flex.lg:gap-x-12
         %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => root_path} Home
+        %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => eco_solar_roofs_path} Eco & Solar
         %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => "#{root_path}#services"} Services
         %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => "#{root_path}#contact-us"} Contact us
 
@@ -23,18 +24,19 @@
           .mobile-logo
             %a{:class => "-m-1.5 p-1.5", :href => root_path}
               %span.sr-only Scutts Roofing Ltd
-              = image_tag('navbar_logo.jpg')
+              = image_tag('navbar_logo.jpg', class: 'h-12 w-auto')
           %button.rounded-md.text-gray-700.close-mobile-menu{:class => "-m-2.5 p-2.5", :type => "button"}
             %span.sr-only Close menu
-            %svg.h-6.w-6{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
+            %svg.h-10.w-10{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
               %path{:d => "M6 18L18 6M6 6l12 12", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
         .mt-6.flow-root
           .-my-6.divide-y
             .space-y-2.py-8
-              %a.-mx-3.block.rounded-lg.bg-orange-600.px-3.py-2.text-xl.font-semibold.leading-7.text-white.hover:opacity-85{:href => roof_inspection_reports_path} Roof Reports
-              %a.-mx-3.block.rounded-lg.px-3.py-2.text-xl.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => root_path} Home
-              %a.-mx-3.block.rounded-lg.px-3.py-2.text-xl.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#{root_path}#services"} Services
-              %a.-mx-3.block.rounded-lg.px-3.py-2.text-xl.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#{root_path}#contact-us"} Contact us
+              %a.-mx-3.block.rounded-lg.bg-orange-600.px-3.py-3.text-lg.font-semibold.leading-7.text-white.hover:opacity-85{:href => roof_inspection_reports_path} Roof Reports
+              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => eco_solar_roofs_path} Eco & Solar
+              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => root_path} Home
+              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#{root_path}#services"} Services
+              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#{root_path}#contact-us"} Contact us
 
   .relative.isolate.overflow-hidden.bg-gray-900
     %img.absolute.-z-10.h-full.w-full.object-cover.opacity-35{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/v1682154263/Scutts%20Roofing/instagram_roof_yxj3ow.jpg"}/
@@ -42,73 +44,76 @@
       .mx-auto.max-w-7xl.px-6.lg:px-8.py-24.sm:py-32.lg:py-40
         .mx-auto.max-w-4xl.text-center
           %h1.text-4xl.font-bold.tracking-tight.text-white.sm:text-5xl.lg:text-6xl London Roof Surveys & Inspection Reports for Property Buyers
-          %p.mt-8.text-xl.leading-8.text-gray-200.sm:text-2xl Independent roof surveyors covering London — we provide clear, honest roof surveys and detailed inspection reports to help you buy with confidence.
+          %p.mt-8.text-lg.leading-8.text-gray-200 Independent roof surveyors covering London - we provide clear, honest roof surveys and detailed inspection reports to help you buy with confidence.
           .mt-10.flex.flex-wrap.items-center.justify-center.gap-4
-            %a.rounded-md.bg-orange-600.text-xl.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "px-6 py-4", :href => "mailto:scutt.roofing@gmail.com?subject=Roof%20Inspection%20Report%20Request"} Request a Roof Report
+            %a.rounded-md.bg-orange-600.text-base.sm:text-lg.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "px-5 py-3", :href => "mailto:scutt.roofing@gmail.com?subject=Roof%20Inspection%20Report%20Request"} Request a Roof Report
 
   %section.bg-gray-50
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
       .grid.grid-cols-1.lg:grid-cols-12.gap-10.items-start.lg:gap-12
         %section.lg:col-span-7.rounded-2xl.bg-white.p-8.lg:p-10.shadow-sm
-          %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl What is a roof survey?
-          %p.mt-6.text-xl.leading-8.text-gray-700.lg:text-lg
-            A roof survey is a non-invasive visual inspection of a property's roof, typically recommended after a Level 3 survey flags the roof for further investigation. As experienced London roof surveyors, we assess condition, identify visible defects, and provide practical repair recommendations — giving you a clear picture of what you're buying before you commit.
-          %a.roof-report-video-cta.mt-8.inline-flex.items-center.gap-2.text-xl.font-semibold.text-orange-600.underline-offset-4.hover:text-orange-500.hover:underline.lg:text-lg{:href => "#roof-report-video"}
+          %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl What is a roof survey?
+          %p.mt-6.text-lg.leading-8.text-gray-700
+            A roof survey is a non-invasive visual inspection of a property's roof, typically recommended after a Level 3 survey flags the roof for further investigation. As experienced London roof surveyors, we assess condition, identify visible defects, and provide practical repair recommendations - giving you a clear picture of what you're buying before you commit.
+          %a.roof-report-video-cta.mt-8.inline-flex.items-center.gap-2.text-lg.font-semibold.text-orange-600.underline-offset-4.hover:text-orange-500.hover:underline{:href => "#roof-report-video"}
             Watch this video to find out more
             %span{"aria-hidden" => "true"} →
         %aside#roof-report-video.lg:col-span-5.flex.w-full.justify-center.lg:justify-end
           .roof-report-video.relative.mx-auto.w-full.max-w-md.lg:max-w-full
-            %video.mx-auto.block.h-auto.w-full.max-w-full.rounded-2xl.object-contain.shadow-sm{:class => "max-h-[34rem] sm:max-h-[32rem] lg:max-h-[34rem] lg:w-auto", "aria-label" => "Roof inspection report walkthrough", :playsinline => "", :poster => "https://res.cloudinary.com/dv1d9t9wu/video/upload/h_680,c_fill,w_380,q_auto,so_0,f_jpg/v1778920645/Scutts%20Roofing/roof_report_sqipgf.jpg", :preload => "none"}
-              %source{:src => "https://res.cloudinary.com/dv1d9t9wu/video/upload/q_auto:good,w_800,c_limit,f_mp4/v1778920645/Scutts%20Roofing/roof_report_sqipgf.mp4", :type => "video/mp4"}
-            %button.roof-report-video-play.absolute.inset-0.flex.items-center.justify-center.rounded-2xl.text-white.transition{:class => "bg-black/25 hover:bg-black/40", :type => "button", "aria-label" => "Play roof inspection report video"}
-              %span.flex.h-20.w-20.items-center.justify-center.rounded-full.bg-orange-600.shadow-lg.lg:h-16.lg:w-16
-                %svg.h-10.w-10.fill-current.lg:h-8.lg:w-8{"aria-hidden" => "true", :viewbox => "0 0 24 24"}
-                  %path{:d => "M8 5v14l11-7z"}
+            .roof-report-video-frame.relative.mx-auto.w-full.overflow-hidden.rounded-2xl.bg-stone-100.shadow-sm{class: "aspect-[9/16] max-h-[34rem] sm:max-h-[32rem] lg:max-h-[34rem]"}
+              %video.absolute.inset-0.h-full.w-full.object-contain{"aria-label" => "Roof inspection report walkthrough", :playsinline => "", :preload => "none"}
+                %source{:src => "https://res.cloudinary.com/dv1d9t9wu/video/upload/q_auto:good,w_800,c_limit,f_mp4/v1778920645/Scutts%20Roofing/roof_report_sqipgf.mp4", :type => "video/mp4"}
+              .roof-report-video-poster.absolute.inset-0.flex.items-center.justify-center.bg-stone-100.px-8
+                = image_tag('navbar_logo.jpg', class: 'w-full max-w-[14rem] h-auto', alt: 'Scutts Roofing')
+              %button.roof-report-video-play.absolute.inset-0.flex.items-center.justify-center.text-white.transition{:class => "bg-black/20 hover:bg-black/35", :type => "button", "aria-label" => "Play roof inspection report video"}
+                %span.flex.h-20.w-20.items-center.justify-center.rounded-full.bg-orange-600.shadow-lg.lg:h-16.lg:w-16
+                  %svg.h-10.w-10.fill-current.lg:h-8.lg:w-8{"aria-hidden" => "true", :viewbox => "0 0 24 24"}
+                    %path{:d => "M8 5v14l11-7z"}
 
   %section.bg-white
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
-      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl Our roof survey process
-      %p.mt-6.max-w-4xl.text-xl.leading-8.text-gray-700.lg:text-lg
+      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl Our roof survey process
+      %p.mt-6.max-w-4xl.text-lg.leading-8.text-gray-700
         Every property is different, but our process follows a clear structure so you understand condition, risk, and realistic next steps before exchange.
       .mt-10.grid.grid-cols-1.md:grid-cols-2.xl:grid-cols-3.gap-6.lg:gap-7
         .rounded-2xl.bg-gray-50.p-6.lg:p-7.shadow-sm
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm 1. Review of Level 3 survey
-          %p.mt-3.text-lg.leading-7.text-gray-700.lg:text-base We review the existing survey report to understand the specific roofing concerns flagged.
+          %p.text-sm.font-semibold.text-orange-600 1. Review of Level 3 survey
+          %p.mt-3.text-base.leading-7.text-gray-700 We review the existing survey report to understand the specific roofing concerns flagged.
         .rounded-2xl.bg-gray-50.p-6.lg:p-7.shadow-sm
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm 2. Site visit
-          %p.mt-3.text-lg.leading-7.text-gray-700.lg:text-base Inspection from safe vantage points and roof-level access where possible, checking for visible wear and defects.
+          %p.text-sm.font-semibold.text-orange-600 2. Site visit
+          %p.mt-3.text-base.leading-7.text-gray-700 Inspection from safe vantage points and roof-level access where possible, checking for visible wear and defects.
         .rounded-2xl.bg-gray-50.p-6.lg:p-7.shadow-sm
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm 3. Key component checks
-          %p.mt-3.text-lg.leading-7.text-gray-700.lg:text-base Tiles or slates, flashings, chimneys, and abutments are assessed for condition and likely risk areas.
+          %p.text-sm.font-semibold.text-orange-600 3. Key component checks
+          %p.mt-3.text-base.leading-7.text-gray-700 Tiles or slates, flashings, chimneys, and abutments are assessed for condition and likely risk areas.
         .rounded-2xl.bg-gray-50.p-6.lg:p-7.shadow-sm
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm 4. Drainage assessment
-          %p.mt-3.text-lg.leading-7.text-gray-700.lg:text-base Gutters, outlets, and drainage paths are checked for signs of blockage, leakage, and poor flow.
+          %p.text-sm.font-semibold.text-orange-600 4. Drainage assessment
+          %p.mt-3.text-base.leading-7.text-gray-700 Gutters, outlets, and drainage paths are checked for signs of blockage, leakage, and poor flow.
         .rounded-2xl.bg-gray-50.p-6.lg:p-7.shadow-sm
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm 5. Photo documentation
-          %p.mt-3.text-lg.leading-7.text-gray-700.lg:text-base Clear photos captured to support findings and help you discuss actions with solicitors or surveyors.
+          %p.text-sm.font-semibold.text-orange-600 5. Photo documentation
+          %p.mt-3.text-base.leading-7.text-gray-700 Clear photos captured to support findings and help you discuss actions with solicitors or surveyors.
         .rounded-2xl.bg-gray-50.p-6.lg:p-7.shadow-sm.md:col-span-2.xl:col-span-1
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm 6. Written report and guidance
-          %p.mt-3.text-lg.leading-7.text-gray-700.lg:text-base A concise written report with recommendations, priorities, and indicative budget ranges.
+          %p.text-sm.font-semibold.text-orange-600 6. Written report and guidance
+          %p.mt-3.text-base.leading-7.text-gray-700 A concise written report with recommendations, priorities, and indicative budget ranges.
 
   %section.bg-gray-50
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
-      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl How much does a roof survey cost?
-      %p.mt-6.text-xl.leading-8.text-gray-700.lg:text-lg
+      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl How much does a roof survey cost?
+      %p.mt-6.text-lg.leading-8.text-gray-700
         Roof survey costs in London start from £200 + VAT for a standard residential property. Larger or complex properties, or those requiring scaffolding, may cost more.
-      %p.mt-6.text-xl.leading-8.text-gray-700.lg:text-lg
+      %p.mt-6.text-lg.leading-8.text-gray-700
         As independent London roof surveyors, we provide transparent pricing before any work begins. If you proceed with any work with us, the survey cost is deducted from your total.
       .mt-8.flex.flex-wrap.items-center.gap-4
-        %a.rounded-md.bg-orange-600.text-xl.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "px-6 py-3.5 lg:px-6 lg:py-3.5", :href => "mailto:scutt.roofing@gmail.com?subject=Roof%20Survey%20Quote"} Request a quote
-        %a.rounded-md.bg-gray-900.text-xl.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "px-6 py-3.5 lg:px-6 lg:py-3.5", :href => "tel:07460839910"} Call us on 07460 839910
+        %a.rounded-md.bg-orange-600.text-base.sm:text-lg.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "px-5 py-3", :href => "mailto:scutt.roofing@gmail.com?subject=Roof%20Survey%20Quote"} Request a quote
+        %a.rounded-md.bg-gray-900.text-base.sm:text-lg.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "px-5 py-3", :href => "tel:07460839910"} Call us on 07460 839910
 
   %section.bg-stone-50
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
       .grid.grid-cols-1.lg:grid-cols-2.gap-10.lg:gap-12.items-start
         .order-1
-          %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl Pre-purchase roofing guidance
-          %p.mt-6.text-xl.leading-8.text-gray-700.lg:text-lg
+          %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl Pre-purchase roofing guidance
+          %p.mt-6.text-lg.leading-8.text-gray-700
             Buying a property with a flagged roof can feel uncertain. Our roof surveys give you practical clarity on likely works, expected spend, and what can wait.
-          %ul.mt-8.space-y-4.text-xl.leading-8.text-gray-700.lg:text-lg
+          %ul.mt-8.space-y-4.text-lg.leading-8.text-gray-700
             %li.flex.gap-3
               %span.mt-2.h-2.w-2.flex-shrink-0.rounded-full.bg-orange-600
               %span Negotiate with evidence, not guesswork
@@ -119,80 +124,80 @@
               %span.mt-2.h-2.w-2.flex-shrink-0.rounded-full.bg-orange-600
               %span Get realistic budget direction before you commit
           .mt-10
-            %a.rounded-md.bg-orange-600.text-2xl.lg:text-xl.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "inline-flex items-center justify-center px-8 py-4 lg:px-6 lg:py-3.5 min-w-[240px]", :href => "mailto:scutt.roofing@gmail.com?subject=Pre-Purchase%20Roof%20Survey"} Book a Roof Survey
+            %a.rounded-md.bg-orange-600.text-base.sm:text-lg.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "inline-flex items-center justify-center px-5 py-3 min-w-[240px]", :href => "mailto:scutt.roofing@gmail.com?subject=Pre-Purchase%20Roof%20Survey"} Book a Roof Survey
         .order-2.w-full.lg:flex.lg:justify-end
           .w-full.overflow-hidden.rounded-2xl.shadow-sm.lg:w-auto{class: "max-lg:aspect-[4/5]"}
             %img.h-full.w-full.object-cover.lg:block.lg:h-auto.lg:w-auto.lg:max-w-full.lg:object-contain{:class => "lg:max-h-[28rem]", :alt => "Scutts Roofing surveyor conducting a pre-purchase roof inspection on site", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_800,c_limit/v1778921497/Scutts%20Roofing/stu_survey_kgurun.jpg"}
 
   %section.bg-white
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
-      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl What's included in a roof survey report?
+      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl What's included in a roof survey report?
       .mt-10.grid.grid-cols-1.md:grid-cols-2.gap-6
-        .rounded-2xl.bg-gray-50.p-6.text-xl.leading-8.text-gray-700.shadow-sm.lg:text-lg Visual inspection of all roof coverings
-        .rounded-2xl.bg-gray-50.p-6.text-xl.leading-8.text-gray-700.shadow-sm.lg:text-lg Assessment of tiles, slates, flashings, chimneys, and guttering
-        .rounded-2xl.bg-gray-50.p-6.text-xl.leading-8.text-gray-700.shadow-sm.lg:text-lg Identification of visible defects and potential water ingress risks
-        .rounded-2xl.bg-gray-50.p-6.text-xl.leading-8.text-gray-700.shadow-sm.lg:text-lg Photographic evidence to support key findings
-        .rounded-2xl.bg-gray-50.p-6.text-xl.leading-8.text-gray-700.shadow-sm.lg:text-lg Written report with clear, jargon-free recommendations
-        .rounded-2xl.bg-gray-50.p-6.text-xl.leading-8.text-gray-700.shadow-sm.lg:text-lg Budget estimates for recommended works
+        .rounded-2xl.bg-gray-50.p-6.text-base.leading-7.text-gray-700.shadow-sm Visual inspection of all roof coverings
+        .rounded-2xl.bg-gray-50.p-6.text-base.leading-7.text-gray-700.shadow-sm Assessment of tiles, slates, flashings, chimneys, and guttering
+        .rounded-2xl.bg-gray-50.p-6.text-base.leading-7.text-gray-700.shadow-sm Identification of visible defects and potential water ingress risks
+        .rounded-2xl.bg-gray-50.p-6.text-base.leading-7.text-gray-700.shadow-sm Photographic evidence to support key findings
+        .rounded-2xl.bg-gray-50.p-6.text-base.leading-7.text-gray-700.shadow-sm Written report with clear, jargon-free recommendations
+        .rounded-2xl.bg-gray-50.p-6.text-base.leading-7.text-gray-700.shadow-sm Budget estimates for recommended works
 
   %section.bg-gray-50
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
       .grid.grid-cols-1.lg:grid-cols-2.gap-8.lg:gap-10
         .rounded-2xl.bg-white.p-8.lg:p-10.shadow-sm
-          %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl When do you need a roof survey?
-          %ul.mt-8.space-y-4.text-xl.leading-8.text-gray-700.lg:text-lg
+          %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl When do you need a roof survey?
+          %ul.mt-8.space-y-4.text-lg.leading-8.text-gray-700
             %li Your Level 3 survey recommends further roof investigation
             %li You're buying an older property and want clarity on likely roof costs
             %li Signs of damp or leaks have been flagged during the purchase process
             %li You want independent roofing input before negotiating on price
         .rounded-2xl.bg-white.p-8.lg:p-10.shadow-sm
-          %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl Why choose Scutts Roofing as your roof surveyors?
-          %ul.mt-8.space-y-4.text-xl.leading-8.text-gray-700.lg:text-lg
-            %li Experienced roofing contractor insight — not theory-only comments
+          %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl Why choose Scutts Roofing as your roof surveyors?
+          %ul.mt-8.space-y-4.text-lg.leading-8.text-gray-700
+            %li Experienced roofing contractor insight - not theory-only comments
             %li Practical recommendations backed by real-world repair methods
             %li Clear, jargon-free reporting you can actually use
-            %li Fast turnaround, typically within 24–72 hours
+            %li Fast turnaround, typically within 24-72 hours
             %li Honest advice on repair versus full replacement decisions
             %li Covering London and surrounding areas
 
   %section.bg-orange-50
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
-      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl What's not included?
-      %p.mt-4.max-w-4xl.text-xl.leading-8.text-gray-700.lg:text-lg
+      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl What's not included?
+      %p.mt-4.max-w-4xl.text-lg.leading-8.text-gray-700
         To keep expectations clear and professional, our roof surveys are visual and non-destructive with defined limits.
       .mt-6.grid.grid-cols-1.md:grid-cols-2.gap-4
-        .rounded-xl.bg-white.p-4.text-lg.leading-7.text-gray-700.shadow-sm.lg:text-base No destructive investigation or opening-up works.
-        .rounded-xl.bg-white.p-4.text-lg.leading-7.text-gray-700.shadow-sm.lg:text-base No lifting of roof coverings unless agreed in advance.
-        .rounded-xl.bg-white.p-4.text-lg.leading-7.text-gray-700.shadow-sm.lg:text-base No guarantee of remaining roof lifespan or future performance.
-        .rounded-xl.bg-white.p-4.text-lg.leading-7.text-gray-700.shadow-sm.lg:text-base Hidden defects may exist where areas are covered or inaccessible.
-        .rounded-xl.bg-white.p-4.text-lg.leading-7.text-gray-700.shadow-sm.lg:text-base Findings are based on safe access available at the time of inspection.
+        .rounded-xl.bg-white.p-4.text-base.leading-7.text-gray-700.shadow-sm No destructive investigation or opening-up works.
+        .rounded-xl.bg-white.p-4.text-base.leading-7.text-gray-700.shadow-sm No lifting of roof coverings unless agreed in advance.
+        .rounded-xl.bg-white.p-4.text-base.leading-7.text-gray-700.shadow-sm No guarantee of remaining roof lifespan or future performance.
+        .rounded-xl.bg-white.p-4.text-base.leading-7.text-gray-700.shadow-sm Hidden defects may exist where areas are covered or inaccessible.
+        .rounded-xl.bg-white.p-4.text-base.leading-7.text-gray-700.shadow-sm Findings are based on safe access available at the time of inspection.
 
   %section.bg-white
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
-      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl.lg:text-4xl Example findings
+      %h2.text-3xl.font-bold.tracking-tight.text-orange-600.sm:text-4xl Example findings
       .mt-8.grid.grid-cols-1.md:grid-cols-3.gap-6
         .rounded-2xl.bg-gray-50.p-7.shadow-sm
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm Roof in serviceable condition with minor repairs recommended
+          %p.text-sm.font-semibold.text-orange-600 Roof in serviceable condition with minor repairs recommended
         .rounded-2xl.bg-gray-50.p-7.shadow-sm
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm Roof coverings at end of service life — renewal recommended
+          %p.text-sm.font-semibold.text-orange-600 Roof coverings at end of service life - renewal recommended
         .rounded-2xl.bg-gray-50.p-7.shadow-sm
-          %p.text-base.font-semibold.text-orange-600.lg:text-sm Visible evidence of historic damp — further targeted investigation advised
+          %p.text-sm.font-semibold.text-orange-600 Visible evidence of historic damp - further targeted investigation advised
 
   %section.bg-gray-50
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-24
       .rounded-2xl.bg-gray-900.p-8.lg:p-10.shadow-sm
         .grid.grid-cols-1.lg:grid-cols-12.gap-8.lg:gap-10.items-start
           .lg:col-span-8
-            %h2.text-3xl.font-bold.tracking-tight.text-white.sm:text-4xl.lg:text-4xl Pricing guide
-            %p.mt-6.text-xl.leading-8.text-gray-300.lg:text-lg Roof inspection reports from £200 + VAT.
-            %ul.mt-6.space-y-3.text-lg.leading-7.text-gray-300.lg:text-base
+            %h2.text-3xl.font-bold.tracking-tight.text-white.sm:text-4xl Pricing guide
+            %p.mt-6.text-lg.leading-8.text-gray-300 Roof inspection reports from £200 + VAT.
+            %ul.mt-6.space-y-3.text-base.leading-7.text-gray-300
               %li Additional costs may apply for scaffolding or specialist access.
               %li Larger or complex properties may require additional survey time.
               %li All figures are indicative and subject to inspection.
           .lg:col-span-4
             .flex.flex-col.sm:flex-row.lg:flex-col.gap-3.lg:items-stretch
-              %a.inline-flex.justify-center.rounded-md.bg-orange-600.text-xl.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.lg:text-lg{:class => "px-6 py-3.5", :href => "mailto:scutt.roofing@gmail.com?subject=Roof%20Inspection%20Pricing"} Request pricing
-              %a.inline-flex.justify-center.rounded-md.bg-white.text-xl.font-semibold.text-black.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.lg:text-lg{:class => "px-6 py-3.5", :href => "tel:07460839910"} 07460 839910
+              %a.inline-flex.justify-center.rounded-md.bg-orange-600.text-base.sm:text-lg.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "px-5 py-3", :href => "mailto:scutt.roofing@gmail.com?subject=Roof%20Inspection%20Pricing"} Request pricing
+              %a.inline-flex.justify-center.rounded-md.bg-white.text-base.sm:text-lg.font-semibold.text-black.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2{:class => "px-5 py-3", :href => "tel:07460839910"} 07460 839910
 
   = render 'footer'
 
@@ -207,12 +212,14 @@
 
   var roofReportVideo = document.querySelector('.roof-report-video video')
   var roofReportPlayButton = document.querySelector('.roof-report-video-play')
+  var roofReportVideoPoster = document.querySelector('.roof-report-video-poster')
   var roofReportVideoCta = document.querySelector('.roof-report-video-cta')
 
   function playRoofReportVideo() {
     if (!roofReportVideo || !roofReportPlayButton) { return }
     roofReportVideo.setAttribute('controls', '')
     roofReportPlayButton.classList.add('hidden')
+    if (roofReportVideoPoster) { roofReportVideoPoster.classList.add('hidden') }
     roofReportVideo.play()
     roofReportVideo.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
   }
@@ -224,6 +231,7 @@
       roofReportVideo.removeAttribute('controls')
       roofReportVideo.currentTime = 0
       roofReportPlayButton.classList.remove('hidden')
+      if (roofReportVideoPoster) { roofReportVideoPoster.classList.remove('hidden') }
     })
   }
 

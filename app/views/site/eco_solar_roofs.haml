@@ -1,0 +1,245 @@
+- content_for :title, 'Eco & Solar Roofs London | In-Roof Solar & Green Roofing | Scutts Roofing'
+- content_for :description, 'Explore eco and solar roof options with London roofers who put the roof first. In-roof solar, panel-ready renewals, and honest advice. Call or email to enquire.'
+%body
+  %header.bg-white.border-b.border-stone-200
+    %nav.flex.items-center.justify-between.p-6.lg:px-8.desktop-navbar{"aria-label" => "Global"}
+      .flex.lg:flex-1
+        %a{:class => "-m-1.5 p-1.5", :href => root_path}
+          %span.sr-only Scutts Roofing Ltd
+          = image_tag('navbar_logo.jpg', class: 'h-12 w-auto')
+      .flex.lg:hidden
+        %button.inline-flex.items-center.justify-center.rounded-md.text-gray-700.open-mobile-menu{:class => "-m-2.5 p-2.5", :type => "button"}
+          %span.sr-only Open main menu
+          %svg.h-12.w-12{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
+            %path{:d => "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
+      .hidden.lg:flex.lg:gap-x-10.items-center
+        %a.text-base.font-semibold.leading-6.text-orange-600{:href => eco_solar_roofs_path} Eco & Solar
+        %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => roof_inspection_reports_path} Roof Reports
+        %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => root_path} Home
+        %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => "#{root_path}#contact-us"} Contact us
+
+    .lg:hidden{"aria-modal" => "true", :role => "dialog"}
+      #mobile-nav.hidden.z-10.w-full.overflow-y-auto.bg-white.px-6.sm:ring-1{:class => "sm:ring-gray-900/10"}
+        .flex.items-center.justify-between
+          .mobile-logo
+            %a{:class => "-m-1.5 p-1.5", :href => root_path}
+              %span.sr-only Scutts Roofing Ltd
+              = image_tag('navbar_logo.jpg', class: 'h-12 w-auto')
+          %button.rounded-md.text-gray-700.close-mobile-menu{:class => "-m-2.5 p-2.5", :type => "button"}
+            %span.sr-only Close menu
+            %svg.h-10.w-10{"aria-hidden" => "true", :fill => "none", :stroke => "currentColor", "stroke-width" => "1.5", :viewbox => "0 0 24 24"}
+              %path{:d => "M6 18L18 6M6 6l12 12", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
+        .mt-6.flow-root
+          .-my-6.divide-y
+            .space-y-2.py-8
+              %a.-mx-3.block.rounded-lg.bg-orange-600.px-3.py-3.text-lg.font-semibold.leading-7.text-white.hover:opacity-85{:href => eco_solar_roofs_path} Eco & Solar
+              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => roof_inspection_reports_path} Roof Reports
+              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => root_path} Home
+              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#{root_path}#contact-us"} Contact us
+
+  / Full-bleed hero - editorial, not card-based
+  .relative.isolate.flex.items-end.overflow-hidden.bg-stone-900{class: "min-h-[85vh]"}
+    %img.absolute.inset-0.-z-10.h-full.w-full.object-cover{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1600,c_limit/v1687536118/Scutts%20Roofing/Misc/324904784_134916666103543_6309358684294191937_n_qrfwdp.jpg"}/
+    .absolute.inset-0.-z-10.bg-gradient-to-t.from-stone-950{class: "via-stone-900/75 to-stone-900/40"}
+    %section.w-full
+      .mx-auto.max-w-7xl.px-6.lg:px-8.pb-16.pt-32.sm:pb-20.sm:pt-40.lg:pb-28.lg:pt-48
+        %p.text-sm.font-semibold.uppercase.text-orange-400{class: "tracking-[0.2em]"} Scutts Roofing
+        %h1.mt-4.max-w-3xl.text-4xl.font-bold.tracking-tight.text-white.sm:text-5xl.lg:text-6xl Eco & solar roofs, starting with the roof itself
+        %p.mt-6.max-w-2xl.text-lg.leading-8.text-stone-200
+          Thinking about solar or a greener roof? Talk to London roofers who care about waterproofing, structure, and finish - not just panel count.
+        .mt-10.flex.flex-col.sm:flex-row.flex-wrap.items-stretch.sm:items-start.gap-4
+          %a.rounded-md.bg-orange-600.text-base.sm:text-lg.font-semibold.text-white.shadow-sm.hover:opacity-80.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.text-center{:class => "px-5 py-3", :href => "mailto:scutt.roofing@gmail.com?subject=Eco%20%26%20Solar%20Roof%20Enquiry"} Email an enquiry
+          .flex.flex-col.items-stretch.sm:items-start.gap-2
+            = render 'whatsapp_button', label: 'WhatsApp us', size_class: 'px-5 py-3 text-base sm:text-lg w-full sm:w-auto justify-center'
+            %a.text-base.font-semibold.text-stone-200.underline.underline-offset-4.hover:text-white.text-center.sm:text-left{:href => "tel:07460839910"} Or call 07460 839910
+
+  / Problem strip - single job: why this page exists
+  %section.bg-orange-600
+    .mx-auto.max-w-7xl.px-6.lg:px-8.py-12
+      %p.max-w-4xl.text-lg.leading-8.text-white.sm:text-xl
+        Solar quotes often skip the hard bit: is your roof ready? We help you get clear on roof condition, solar options, and what makes sense for your property - before you commit.
+
+  / Options: in-roof vs on-roof - editorial split, minimal chrome
+  %section.bg-stone-50
+    .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28
+      .max-w-3xl
+        %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl Two ways solar meets a roof
+        %p.mt-5.text-lg.leading-8.text-stone-600
+          Most homes choose one of these routes. Neither is “better” in every case - the right answer depends on your roof age, look, and how much work is already planned.
+      .mt-14.grid.grid-cols-1.gap-12.lg:grid-cols-2.lg:gap-16
+        %div
+          .h-1.w-16.bg-orange-600
+          %h3.mt-6.text-2xl.font-bold.text-stone-900 On-roof panels
+          %p.mt-4.text-lg.leading-8.text-stone-600
+            Modules sit above your existing covering. Often the quicker retrofit when the roof is sound and you want generation without a full renewal.
+          %ul.mt-6.space-y-3.text-base.leading-7.text-stone-700
+            %li.flex.gap-3
+              %span.mt-2.flex-shrink-0.rounded-full.bg-orange-600{class: "h-1.5 w-1.5"}
+              %span Works well on many sound pitched roofs
+            %li.flex.gap-3
+              %span.mt-2.flex-shrink-0.rounded-full.bg-orange-600{class: "h-1.5 w-1.5"}
+              %span Needs careful flashing and fixing so weatherproofing stays intact
+            %li.flex.gap-3
+              %span.mt-2.flex-shrink-0.rounded-full.bg-orange-600{class: "h-1.5 w-1.5"}
+              %span More visible from the street than integrated systems
+        %div
+          .h-1.w-16.bg-emerald-700
+          %h3.mt-6.text-2xl.font-bold.text-stone-900 In-roof & integrated solar
+          %p.mt-4.text-lg.leading-8.text-stone-600
+            Panels or solar tiles sit flush with the roof plane - closer to traditional coverings in look, and often considered when a roof is being renewed or rebuilt.
+          %ul.mt-6.space-y-3.text-base.leading-7.text-stone-700
+            %li.flex.gap-3
+              %span.mt-2.flex-shrink-0.rounded-full.bg-emerald-700{class: "h-1.5 w-1.5"}
+              %span Cleaner appearance for new builds and full renewals
+            %li.flex.gap-3
+              %span.mt-2.flex-shrink-0.rounded-full.bg-emerald-700{class: "h-1.5 w-1.5"}
+              %span Becomes part of the weatherproof build-up - detailing matters
+            %li.flex.gap-3
+              %span.mt-2.flex-shrink-0.rounded-full.bg-emerald-700{class: "h-1.5 w-1.5"}
+              %span Best discussed early if you are already planning roof works
+
+  / Roofer-first angle - unique Scutts pitch
+  %section.bg-white
+    .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28
+      .grid.grid-cols-1.items-center.gap-12.lg:grid-cols-12.lg:gap-16
+        .lg:col-span-5
+          %img.w-full.object-cover{:alt => "Roof covering detail - the foundation for any solar or eco roof project", :class => "aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_900,c_limit/v1687536560/Scutts%20Roofing/Misc/blue_tile_roof_ibvvwl.png"}/
+        .lg:col-span-7
+          %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl Why speak to a roofer before a solar sales pitch?
+          %p.mt-6.text-lg.leading-8.text-stone-600
+            Installers sell systems. We live in roof build-ups, leaks, and long-term weather performance. That lens matters when you are deciding whether to mount panels, renew the covering first, or look at in-roof solutions.
+          .mt-10.space-y-8
+            %div
+              %p.text-sm.font-semibold.uppercase.tracking-wider.text-orange-600 Roof readiness
+              %p.mt-2.text-lg.leading-8.text-stone-700
+                Covering age, tiling condition, and access all affect whether solar belongs on the current roof - or after works.
+            %div
+              %p.text-sm.font-semibold.uppercase.tracking-wider.text-orange-600 Weatherproofing
+              %p.mt-2.text-lg.leading-8.text-stone-700
+                Every penetration and abutment is a potential weak point. Fixings and flashings need a roofing mindset, not just an electrical one.
+            %div
+              %p.text-sm.font-semibold.uppercase.tracking-wider.text-orange-600 Straight answers
+              %p.mt-2.text-lg.leading-8.text-stone-700
+                We are growing this side of the business carefully. You get practical guidance on what is realistic for your roof - without the hard sell.
+
+  / Mid CTA
+  %section.bg-stone-900
+    .mx-auto.max-w-7xl.px-6.lg:px-8.py-16.lg:py-20
+      .flex.flex-col.gap-8.lg:flex-row.lg:items-end.lg:justify-between
+        %div
+          %h2.text-3xl.font-bold.tracking-tight.text-white.sm:text-4xl Curious whether solar fits your roof?
+          %p.mt-4.max-w-xl.text-lg.leading-8.text-stone-300
+            Send a few photos and your postcode on WhatsApp, or email us. No obligation - we will tell you honestly if it is worth exploring further.
+        .flex.flex-col.sm:flex-row.flex-wrap.gap-3
+          %a.inline-flex.justify-center.rounded-md.bg-orange-600.text-base.sm:text-lg.font-semibold.text-white.hover:opacity-80{:class => "px-5 py-3", :href => "mailto:scutt.roofing@gmail.com?subject=Eco%20%26%20Solar%20Roof%20Enquiry&body=Hi%20Scutts%2C%0A%0AI%27m%20interested%20in%20eco%20%2F%20solar%20roof%20options.%0A%0APostcode%3A%0AProperty%20type%3A%0ARough%20age%20of%20roof%20(if%20known)%3A%0AAnything%20else%3A%0A"} Email with details
+          .flex.flex-col.items-stretch.gap-2
+            = render 'whatsapp_button', label: 'Message on WhatsApp'
+            %a.inline-flex.items-center.justify-center.text-base.font-semibold.text-stone-300.underline.underline-offset-4.hover:text-white{:href => "tel:07460839910"} Call 07460 839910
+
+  / What we can help with
+  %section.bg-stone-50
+    .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28
+      %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl What an enquiry can cover
+      %p.mt-5.max-w-3xl.text-lg.leading-8.text-stone-600
+        This page is here to gauge interest as we expand into eco and solar roofing. Tell us where you are in the journey and we will point you in a sensible direction.
+      %ol.mt-14.grid.grid-cols-1.gap-y-10.md:grid-cols-2.md:gap-x-12.lg:grid-cols-4.lg:gap-x-8
+        %li
+          %span.block.text-4xl.font-bold.text-orange-600 01
+          %p.mt-3.text-lg.font-semibold.text-stone-900 Roof suitability check
+          %p.mt-2.text-base.leading-7.text-stone-600 Orientation, shading risk in plain terms, covering condition, and whether works should come first.
+        %li
+          %span.block.text-4xl.font-bold.text-orange-600 02
+          %p.mt-3.text-lg.font-semibold.text-stone-900 Panel-ready renewals
+          %p.mt-2.text-base.leading-7.text-stone-600 Planning a new roof? We can discuss keeping the covering ready for solar later - or coordinating in-roof options.
+        %li
+          %span.block.text-4xl.font-bold.text-orange-600 03
+          %p.mt-3.text-lg.font-semibold.text-stone-900 In-roof conversations
+          %p.mt-2.text-base.leading-7.text-stone-600 Flush-fit and solar-tile style approaches for homes where appearance and a full roof job already matter.
+        %li
+          %span.block.text-4xl.font-bold.text-orange-600 04
+          %p.mt-3.text-lg.font-semibold.text-stone-900 Green roof thinking
+          %p.mt-2.text-base.leading-7.text-stone-600 Living and planted roof systems where structure, drainage, and waterproofing are designed together - not bolted on.
+
+  / Simple process
+  %section.bg-white
+    .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28
+      %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl How it works
+      %p.mt-5.max-w-2xl.text-lg.leading-8.text-stone-600
+        No online quote wizard - just a clear first conversation.
+      .mt-14.relative
+        .hidden.lg:block.absolute.top-5.left-0.right-0.h-px.bg-stone-200
+        .grid.grid-cols-1.gap-10.md:grid-cols-3
+          .relative.bg-white
+            .flex.h-10.w-10.items-center.justify-center.rounded-full.bg-orange-600.text-sm.font-bold.text-white 1
+            %p.mt-5.text-lg.font-semibold.text-stone-900 Get in touch
+            %p.mt-2.text-base.leading-7.text-stone-600 WhatsApp, email, or call with your address, a short description, and photos if you have them.
+          .relative.bg-white
+            .flex.h-10.w-10.items-center.justify-center.rounded-full.bg-orange-600.text-sm.font-bold.text-white 2
+            %p.mt-5.text-lg.font-semibold.text-stone-900 Roof-first advice
+            %p.mt-2.text-base.leading-7.text-stone-600 We talk through condition, access, and whether solar or eco options are realistic for your property.
+          .relative.bg-white
+            .flex.h-10.w-10.items-center.justify-center.rounded-full.bg-orange-600.text-sm.font-bold.text-white 3
+            %p.mt-5.text-lg.font-semibold.text-stone-900 Next steps
+            %p.mt-2.text-base.leading-7.text-stone-600 If it makes sense, we arrange a visit or outline options. If it does not, we will say so.
+
+  / Practical notes - FAQ style without accordion JS
+  %section.bg-stone-100
+    .mx-auto.max-w-3xl.px-6.lg:px-8.py-20.lg:py-28
+      %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl Good to know
+      .mt-12.divide-y.divide-stone-300
+        .py-8{class: "first:pt-0"}
+          %h3.text-lg.font-semibold.text-stone-900 Do solar panels work on London roofs?
+          %p.mt-3.text-base.leading-7.text-stone-600
+            Yes - output varies with orientation, pitch, and shading. Cold, clear days can still generate well; snow cover or heavy shade is the real limiter. We focus on whether your roof setup is suitable, not optimistic brochure figures.
+        .py-8
+          %h3.text-lg.font-semibold.text-stone-900 Will I need planning permission?
+          %p.mt-3.text-base.leading-7.text-stone-600
+            Many domestic solar installations fall under permitted development, but listed buildings, conservation areas, and some roof changes may need consent. We flag when you should check with the local authority before proceeding.
+        .py-8
+          %h3.text-lg.font-semibold.text-stone-900 What about battery storage and EV charging?
+          %p.mt-3.text-base.leading-7.text-stone-600
+            Those sit alongside solar for many households. Our starting point is the roof and weather envelope; we can discuss how generation might fit with storage or charging once the building side is clear.
+        .py-8{class: "last:pb-0"}
+          %h3.text-lg.font-semibold.text-stone-900 Why are you asking for interest now?
+          %p.mt-3.text-base.leading-7.text-stone-600
+            Eco and solar roofing is a growth area for Scutts. This page helps us see demand across London so we can shape the service properly - with the same straight communication our repair and survey clients already expect.
+
+  / Final CTA
+  %section.relative.overflow-hidden.bg-stone-900
+    %img.absolute.inset-0.h-full.w-full.object-cover.opacity-25{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1400,c_limit/v1682154263/Scutts%20Roofing/instagram_roof_yxj3ow.jpg"}/
+    .relative.mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28.text-center
+      %h2.text-3xl.font-bold.tracking-tight.text-white.sm:text-4xl.lg:text-5xl Tell us about your roof
+      %p.mx-auto.mt-6.max-w-2xl.text-lg.leading-8.text-stone-200
+        Whether you want lower bills, a cleaner roof line, or a renewal that is ready for solar later - start with a conversation.
+      .mt-10.flex.flex-col.sm:flex-row.flex-wrap.items-stretch.sm:items-start.justify-center.gap-4
+        %a.rounded-md.bg-orange-600.text-base.sm:text-lg.font-semibold.text-white.hover:opacity-80.text-center{:class => "px-6 py-3.5", :href => "mailto:scutt.roofing@gmail.com?subject=Eco%20%26%20Solar%20Roof%20Enquiry"} Email Scutts Roofing
+        .flex.flex-col.items-center.gap-2
+          = render 'whatsapp_button', label: 'WhatsApp Scutts', size_class: 'px-6 py-3.5 text-base sm:text-lg w-full sm:w-auto justify-center'
+          %a.text-base.font-semibold.text-stone-200.underline.underline-offset-4.hover:text-white{:href => "tel:07460839910"} Or call 07460 839910
+
+  = render 'footer'
+
+:javascript
+  var openMobileButton = document.querySelector('.open-mobile-menu')
+  var closeMobileButton = document.querySelector('.close-mobile-menu')
+
+  if (openMobileButton && closeMobileButton) {
+    openMobileButton.addEventListener('click', showMobileMenu)
+    closeMobileButton.addEventListener('click', closeMobileMenu)
+  }
+
+  function showMobileMenu() {
+    var mobileNav = document.querySelector('#mobile-nav')
+    if (!mobileNav) { return }
+    mobileNav.classList.remove('hidden')
+    openMobileButton.classList.add('hidden')
+    document.querySelector('.desktop-navbar').classList.add('hidden')
+  }
+
+  function closeMobileMenu() {
+    var mobileNav = document.querySelector('#mobile-nav')
+    if (!mobileNav) { return }
+    mobileNav.classList.add('hidden')
+    openMobileButton.classList.remove('hidden')
+    document.querySelector('.desktop-navbar').classList.remove('hidden')
+  }
