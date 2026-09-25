@@ -14,8 +14,8 @@
             %path{:d => "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
       .hidden.lg:flex.lg:gap-x-12
         %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => root_path} Home
+        %a.text-base.font-semibold.leading-6.text-orange-600{:href => roof_inspection_reports_path} Roof Reports
         %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => eco_solar_roofs_path} Eco & Solar
-        %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => "#{root_path}#services"} Services
         %a.text-base.font-semibold.leading-6.text-gray-900.hover:underline.hover:decoration-orange-600{:href => "#{root_path}#contact-us"} Contact us
 
     .lg:hidden{"aria-modal" => "true", :role => "dialog"}
@@ -32,10 +32,9 @@
         .mt-6.flow-root
           .-my-6.divide-y
             .space-y-2.py-8
+              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => root_path} Home
               %a.-mx-3.block.rounded-lg.bg-orange-600.px-3.py-3.text-lg.font-semibold.leading-7.text-white.hover:opacity-85{:href => roof_inspection_reports_path} Roof Reports
               %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => eco_solar_roofs_path} Eco & Solar
-              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => root_path} Home
-              %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#{root_path}#services"} Services
               %a.-mx-3.block.rounded-lg.px-3.py-3.text-lg.font-semibold.leading-7.text-gray-900.hover:bg-gray-50{:href => "#{root_path}#contact-us"} Contact us
 
   .relative.isolate.overflow-hidden.bg-gray-900
