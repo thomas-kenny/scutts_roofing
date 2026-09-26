@@ -39,7 +39,7 @@
 
   / Full-bleed hero - editorial, not card-based
   .relative.isolate.flex.items-end.overflow-hidden.bg-stone-900{class: "min-h-[85vh]"}
-    %img.absolute.inset-0.-z-10.h-full.w-full.object-cover{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1600,c_limit/v1687536118/Scutts%20Roofing/Misc/324904784_134916666103543_6309358684294191937_n_qrfwdp.jpg"}/
+    %img.absolute.inset-0.-z-10.h-full.w-full.object-cover{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1600,c_limit/v1790429874/Scutts%20Roofing/Eco%20%2B%20Solar/PHOTO-2026-09-25-17-29-29_d5hyey.jpg"}/
     .absolute.inset-0.-z-10.bg-gradient-to-t.from-stone-950{class: "via-stone-900/75 to-stone-900/40"}
     %section.w-full
       .mx-auto.max-w-7xl.px-6.lg:px-8.pb-16.pt-32.sm:pb-20.sm:pt-40.lg:pb-28.lg:pt-48
@@ -68,7 +68,8 @@
           Most homes choose one of these routes. Neither is “better” in every case - the right answer depends on your roof age, look, and how much work is already planned.
       .mt-14.grid.grid-cols-1.gap-12.lg:grid-cols-2.lg:gap-16
         %div
-          .h-1.w-16.bg-orange-600
+          %img.w-full.object-cover{:alt => "Solar panels installed on a flat roof", :class => "aspect-[5/4]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_900,c_limit/v1790428867/Scutts%20Roofing/Eco%20%2B%20Solar/michael-pointner-9XNbOxsSIrw-unsplash_plo1wm.jpg"}/
+          .mt-8.h-1.w-16.bg-orange-600
           %h3.mt-6.text-2xl.font-bold.text-stone-900 On-roof panels
           %p.mt-4.text-lg.leading-8.text-stone-600
             Modules sit above your existing covering. Often the quicker retrofit when the roof is sound and you want generation without a full renewal.
@@ -83,7 +84,8 @@
               %span.mt-2.flex-shrink-0.rounded-full.bg-orange-600{class: "h-1.5 w-1.5"}
               %span More visible from the street than integrated systems
         %div
-          .h-1.w-16.bg-emerald-700
+          %img.w-full.object-cover{:alt => "Rows of solar panels on a roof installation", :class => "aspect-[5/4]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_900,c_limit/v1790428865/Scutts%20Roofing/Eco%20%2B%20Solar/michael-pointner-t-rzp15L7qg-unsplash_qpojy5.jpg"}/
+          .mt-8.h-1.w-16.bg-emerald-700
           %h3.mt-6.text-2xl.font-bold.text-stone-900 In-roof & integrated solar
           %p.mt-4.text-lg.leading-8.text-stone-600
             Panels or solar tiles sit flush with the roof plane - closer to traditional coverings in look, and often considered when a roof is being renewed or rebuilt.
@@ -103,7 +105,7 @@
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28
       .grid.grid-cols-1.items-center.gap-12.lg:grid-cols-12.lg:gap-16
         .lg:col-span-5
-          %img.w-full.object-cover{:alt => "Roof covering detail - the foundation for any solar or eco roof project", :class => "aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_900,c_limit/v1687536560/Scutts%20Roofing/Misc/blue_tile_roof_ibvvwl.png"}/
+          %img.w-full.object-cover{:alt => "Sedum green roof with London skyline beyond", :class => "aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_900,c_limit/v1790428865/Scutts%20Roofing/Eco%20%2B%20Solar/375b9700-6d10-4ba4-b528-f631e7edd2e5_ob3kba.jpg"}/
         .lg:col-span-7
           %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl Why speak to a roofer before a solar sales pitch?
           %p.mt-6.text-lg.leading-8.text-stone-600
@@ -121,6 +123,28 @@
               %p.text-sm.font-semibold.uppercase.tracking-wider.text-orange-600 Straight answers
               %p.mt-2.text-lg.leading-8.text-stone-700
                 We are growing this side of the business carefully. You get practical guidance on what is realistic for your roof - without the hard sell.
+
+  / Project video + eco gallery
+  %section#eco-solar-video.bg-stone-100
+    .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28
+      .max-w-3xl
+        %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl A living roof overlooking London
+        %p.mt-5.text-lg.leading-8.text-stone-600
+          Green roofs are more than a planted finish - they need the right waterproofing, drainage, and detailing underneath. Take a look at a recent project.
+      .eco-solar-video.relative.mx-auto.mt-12.max-w-4xl
+        .eco-solar-video-frame.relative.w-full.overflow-hidden.bg-stone-900{class: "aspect-video"}
+          %video.absolute.inset-0.h-full.w-full.object-contain{"aria-label" => "Green eco roof project video", :playsinline => "", :preload => "none"}
+            %source{:src => "https://res.cloudinary.com/dv1d9t9wu/video/upload/q_auto:good,w_1200,c_limit,f_mp4/v1790428867/Scutts%20Roofing/Eco%20%2B%20Solar/db7783fb-4cd2-499a-89f8-a79d549dbe8b_edaang.mp4", :type => "video/mp4"}
+          .eco-solar-video-poster.absolute.inset-0
+            %img.h-full.w-full.object-cover{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1200,c_limit/v1790428866/Scutts%20Roofing/Eco%20%2B%20Solar/7886cf30-f6a7-4030-a2db-4c3635c8153a_sylyrz.jpg"}/
+          %button.eco-solar-video-play.absolute.inset-0.flex.items-center.justify-center.text-white.transition{:class => "bg-black/25 hover:bg-black/40", :type => "button", "aria-label" => "Play eco roof project video"}
+            %span.flex.h-20.w-20.items-center.justify-center.rounded-full.bg-orange-600.shadow-lg
+              %svg.h-10.w-10.fill-current{"aria-hidden" => "true", :viewbox => "0 0 24 24"}
+                %path{:d => "M8 5v14l11-7z"}
+      .mt-10.grid.grid-cols-1.gap-4.sm:grid-cols-2.lg:grid-cols-3
+        %img.w-full.object-cover{:alt => "Green roof terrace with lounge seating and city views", :class => "aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_800,c_limit/v1790428865/Scutts%20Roofing/Eco%20%2B%20Solar/6da79f0c-a546-41c2-b5d0-0c7d4b5cc6d0_q4kp5t.jpg"}/
+        %img.w-full.object-cover{:alt => "Sedum planting on a living roof with pebble border", :class => "aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_800,c_limit/v1790428865/Scutts%20Roofing/Eco%20%2B%20Solar/375b9700-6d10-4ba4-b528-f631e7edd2e5_ob3kba.jpg"}/
+        %img.w-full.object-cover.sm:col-span-2.lg:col-span-1{:alt => "Living roof overlooking suburban London and the city skyline", :class => "aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_800,c_limit/v1790428866/Scutts%20Roofing/Eco%20%2B%20Solar/7886cf30-f6a7-4030-a2db-4c3635c8153a_sylyrz.jpg"}/
 
   / Mid CTA
   %section.bg-stone-900
@@ -206,7 +230,7 @@
 
   / Final CTA
   %section.relative.overflow-hidden.bg-stone-900
-    %img.absolute.inset-0.h-full.w-full.object-cover.opacity-25{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1400,c_limit/v1682154263/Scutts%20Roofing/instagram_roof_yxj3ow.jpg"}/
+    %img.absolute.inset-0.h-full.w-full.object-cover.opacity-25{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1400,c_limit/v1790429874/Scutts%20Roofing/Eco%20%2B%20Solar/PHOTO-2026-09-25-17-29-29_d5hyey.jpg"}/
     .relative.mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28.text-center
       %h2.text-3xl.font-bold.tracking-tight.text-white.sm:text-4xl.lg:text-5xl Tell us about your roof
       %p.mx-auto.mt-6.max-w-2xl.text-lg.leading-8.text-stone-200
@@ -226,6 +250,29 @@
   if (openMobileButton && closeMobileButton) {
     openMobileButton.addEventListener('click', showMobileMenu)
     closeMobileButton.addEventListener('click', closeMobileMenu)
+  }
+
+  var ecoSolarVideo = document.querySelector('.eco-solar-video video')
+  var ecoSolarPlayButton = document.querySelector('.eco-solar-video-play')
+  var ecoSolarVideoPoster = document.querySelector('.eco-solar-video-poster')
+
+  function playEcoSolarVideo() {
+    if (!ecoSolarVideo || !ecoSolarPlayButton) { return }
+    ecoSolarVideo.setAttribute('controls', '')
+    ecoSolarPlayButton.classList.add('hidden')
+    if (ecoSolarVideoPoster) { ecoSolarVideoPoster.classList.add('hidden') }
+    ecoSolarVideo.play()
+  }
+
+  if (ecoSolarVideo && ecoSolarPlayButton) {
+    ecoSolarPlayButton.addEventListener('click', playEcoSolarVideo)
+
+    ecoSolarVideo.addEventListener('ended', function () {
+      ecoSolarVideo.removeAttribute('controls')
+      ecoSolarVideo.currentTime = 0
+      ecoSolarPlayButton.classList.remove('hidden')
+      if (ecoSolarVideoPoster) { ecoSolarVideoPoster.classList.remove('hidden') }
+    })
   }
 
   function showMobileMenu() {
