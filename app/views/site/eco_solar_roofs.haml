@@ -127,24 +127,28 @@
   / Project video + eco gallery
   %section#eco-solar-video.bg-stone-100
     .mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28
-      .max-w-3xl
-        %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl A living roof overlooking London
-        %p.mt-5.text-lg.leading-8.text-stone-600
-          Green roofs are more than a planted finish - they need the right waterproofing, drainage, and detailing underneath. Take a look at a recent project.
-      .eco-solar-video.relative.mx-auto.mt-12.max-w-4xl
-        .eco-solar-video-frame.relative.w-full.overflow-hidden.bg-stone-900{class: "aspect-video"}
-          %video.absolute.inset-0.h-full.w-full.object-contain{"aria-label" => "Green eco roof project video", :playsinline => "", :preload => "none"}
-            %source{:src => "https://res.cloudinary.com/dv1d9t9wu/video/upload/q_auto:good,w_1200,c_limit,f_mp4/v1790428867/Scutts%20Roofing/Eco%20%2B%20Solar/db7783fb-4cd2-499a-89f8-a79d549dbe8b_edaang.mp4", :type => "video/mp4"}
-          .eco-solar-video-poster.absolute.inset-0
-            %img.h-full.w-full.object-cover{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1200,c_limit/v1790428866/Scutts%20Roofing/Eco%20%2B%20Solar/7886cf30-f6a7-4030-a2db-4c3635c8153a_sylyrz.jpg"}/
-          %button.eco-solar-video-play.absolute.inset-0.flex.items-center.justify-center.text-white.transition{:class => "bg-black/25 hover:bg-black/40", :type => "button", "aria-label" => "Play eco roof project video"}
-            %span.flex.h-20.w-20.items-center.justify-center.rounded-full.bg-orange-600.shadow-lg
-              %svg.h-10.w-10.fill-current{"aria-hidden" => "true", :viewbox => "0 0 24 24"}
-                %path{:d => "M8 5v14l11-7z"}
-      .mt-10.grid.grid-cols-1.gap-4.sm:grid-cols-2.lg:grid-cols-3
+      .grid.grid-cols-1.items-center.gap-12.lg:grid-cols-12.lg:gap-16
+        .lg:col-span-5
+          %h2.text-3xl.font-bold.tracking-tight.text-stone-900.sm:text-4xl A living roof overlooking London
+          %p.mt-5.text-lg.leading-8.text-stone-600
+            Green roofs are more than a planted finish - they need the right waterproofing, drainage, and detailing underneath. Take a look at a recent project.
+          %button.eco-solar-video-cta.mt-8.inline-flex.items-center.gap-2.text-lg.font-semibold.text-orange-600.underline-offset-4.hover:text-orange-500.hover:underline{:type => "button"}
+            Watch the project video
+            %span{"aria-hidden" => "true"} →
+        %aside.lg:col-span-7.flex.w-full.justify-center
+          .eco-solar-video.relative.mx-auto.w-full.max-w-md.lg:max-w-sm
+            .eco-solar-video-frame.relative.mx-auto.w-full.overflow-hidden.bg-stone-900{class: "aspect-[9/16] max-h-[34rem] sm:max-h-[32rem] lg:max-h-[36rem]"}
+              %video.absolute.inset-0.h-full.w-full.object-contain{"aria-label" => "Green eco roof project video", :playsinline => true, :preload => "metadata"}
+                %source{:src => "https://res.cloudinary.com/dv1d9t9wu/video/upload/q_auto:good,w_800,c_limit,f_mp4/v1790428867/Scutts%20Roofing/Eco%20%2B%20Solar/db7783fb-4cd2-499a-89f8-a79d549dbe8b_edaang.mp4", :type => "video/mp4"}
+              .eco-solar-video-poster.absolute.inset-0
+                %img.h-full.w-full.object-cover{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_800,c_limit/v1790428866/Scutts%20Roofing/Eco%20%2B%20Solar/7886cf30-f6a7-4030-a2db-4c3635c8153a_sylyrz.jpg"}/
+              %button.eco-solar-video-play.absolute.inset-0.flex.items-center.justify-center.text-white.transition{:class => "bg-black/25 hover:bg-black/40", :type => "button", "aria-label" => "Play eco roof project video"}
+                %span.flex.h-20.w-20.items-center.justify-center.rounded-full.bg-orange-600.shadow-lg
+                  %svg.h-10.w-10.fill-current{"aria-hidden" => "true", :viewbox => "0 0 24 24"}
+                    %path{:d => "M8 5v14l11-7z"}
+      .mt-12.grid.grid-cols-1.gap-4.sm:grid-cols-2
         %img.w-full.object-cover{:alt => "Green roof terrace with lounge seating and city views", :class => "aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_800,c_limit/v1790428865/Scutts%20Roofing/Eco%20%2B%20Solar/6da79f0c-a546-41c2-b5d0-0c7d4b5cc6d0_q4kp5t.jpg"}/
         %img.w-full.object-cover{:alt => "Sedum planting on a living roof with pebble border", :class => "aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_800,c_limit/v1790428865/Scutts%20Roofing/Eco%20%2B%20Solar/375b9700-6d10-4ba4-b528-f631e7edd2e5_ob3kba.jpg"}/
-        %img.w-full.object-cover.sm:col-span-2.lg:col-span-1{:alt => "Living roof overlooking suburban London and the city skyline", :class => "aspect-[4/5]", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_800,c_limit/v1790428866/Scutts%20Roofing/Eco%20%2B%20Solar/7886cf30-f6a7-4030-a2db-4c3635c8153a_sylyrz.jpg"}/
 
   / Mid CTA
   %section.bg-stone-900
@@ -230,7 +234,7 @@
 
   / Final CTA
   %section.relative.overflow-hidden.bg-stone-900
-    %img.absolute.inset-0.h-full.w-full.object-cover.opacity-25{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1400,c_limit/v1790429874/Scutts%20Roofing/Eco%20%2B%20Solar/PHOTO-2026-09-25-17-29-29_d5hyey.jpg"}/
+    %img.absolute.inset-0.h-full.w-full.object-cover.opacity-25{:alt => "", :src => "https://res.cloudinary.com/dv1d9t9wu/image/upload/q_auto,w_1400,c_limit/v1790428867/Scutts%20Roofing/Eco%20%2B%20Solar/michael-pointner-9XNbOxsSIrw-unsplash_plo1wm.jpg"}/
     .relative.mx-auto.max-w-7xl.px-6.lg:px-8.py-20.lg:py-28.text-center
       %h2.text-3xl.font-bold.tracking-tight.text-white.sm:text-4xl.lg:text-5xl Tell us about your roof
       %p.mx-auto.mt-6.max-w-2xl.text-lg.leading-8.text-stone-200
@@ -255,6 +259,7 @@
   var ecoSolarVideo = document.querySelector('.eco-solar-video video')
   var ecoSolarPlayButton = document.querySelector('.eco-solar-video-play')
   var ecoSolarVideoPoster = document.querySelector('.eco-solar-video-poster')
+  var ecoSolarVideoCta = document.querySelector('.eco-solar-video-cta')
 
   function playEcoSolarVideo() {
     if (!ecoSolarVideo || !ecoSolarPlayButton) { return }
@@ -262,6 +267,7 @@
     ecoSolarPlayButton.classList.add('hidden')
     if (ecoSolarVideoPoster) { ecoSolarVideoPoster.classList.add('hidden') }
     ecoSolarVideo.play()
+    ecoSolarVideo.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
   }
 
   if (ecoSolarVideo && ecoSolarPlayButton) {
@@ -273,6 +279,10 @@
       ecoSolarPlayButton.classList.remove('hidden')
       if (ecoSolarVideoPoster) { ecoSolarVideoPoster.classList.remove('hidden') }
     })
+  }
+
+  if (ecoSolarVideoCta) {
+    ecoSolarVideoCta.addEventListener('click', playEcoSolarVideo)
   }
 
   function showMobileMenu() {
